@@ -1,0 +1,20 @@
+import Greeting from './components/single-components/Greeting'
+import Header from  './components/multiple-components/Header/Header'
+import Footer from './components/multiple-components/Footer/Footer'
+
+import './App.css'
+
+function App() {
+  return (
+    <div className="app">
+      <Header />
+      <h1>React Fundamentals</h1>
+      <p>Welcome to Module 13</p>
+      <main className="main-content">
+        <Greeting />
+      </main>
+      <Footer />
+    </div>
+  )
+}
+export default App
