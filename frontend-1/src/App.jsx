@@ -2,7 +2,8 @@ import Greeting from './components/single-components/Greeting'
 import Header from  './components/multiple-components/Header/Header'
 import Footer from './components/multiple-components/Footer/Footer'
 import JSXExample from './components/Jsx-Examples/JSXExample.jsx'
-
+import ConditionalRendering from './components/Conditional-Rendering/ConditionalRendering.jsx'
+import InlineStyleExample from './components/inline-Style/InlineStyleExample.jsx'
 import './App.css'
 
 function App() {
@@ -14,7 +15,10 @@ function App() {
       <main className="main-content">
         <Greeting />
         <JSXExample />
+        <ConditionalRendering />
+        <InlineStyleExample />
       </main>
+      
       <Footer />
     </div>
   )
