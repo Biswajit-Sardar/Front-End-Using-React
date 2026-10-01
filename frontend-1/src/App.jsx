@@ -1,6 +1,7 @@
 import Greeting from './components/single-components/Greeting'
 import Header from  './components/multiple-components/Header/Header'
 import Footer from './components/multiple-components/Footer/Footer'
+import JSXExample from './components/Jsx-Examples/JSXExample.jsx'
 
 import './App.css'
 
@@ -12,6 +13,7 @@ function App() {
       <p>Welcome to Module 13</p>
       <main className="main-content">
         <Greeting />
+        <JSXExample />
       </main>
       <Footer />
     </div>
