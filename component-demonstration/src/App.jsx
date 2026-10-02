@@ -6,6 +6,7 @@ import About from './components/About/About'
 import Review from './components/Review/Review'
 import Contact from './components/Contact/Contact'
 import Blog from './components/Blog/Blog'
+import Footer from './components/Footer/Footer'
 
 
 
@@ -25,6 +26,7 @@ function App() {
         <Review />
         <Contact />
         <Blog />
+        <Footer />
 
 
       </main>
