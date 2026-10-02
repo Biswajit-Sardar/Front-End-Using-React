@@ -1,75 +1,193 @@
+import { useState } from 'react';
 import './Header.css';
-// cspell:disable-next-line
 import logo from '../../assets/pngegg.png';
 import { Link } from 'react-router-dom';
 
-
 const Header = () => {
+
+    // Search open / close
+    const [searchActive, setSearchActive] = useState(false);
+
+    // Cart open / close
+    const [cartActive, setCartActive] = useState(false);
+
+    // Mobile menu open / close
+    const [menuActive, setMenuActive] = useState(false);
+
     return (
         <header className="header">
-            <a href="#" className="logo">
-                <img src={logo} alt="logo" />
-            </a>
-            <nav className="navbar">
-                <Link to="/" className="active">Home</Link>
-                <Link to="/about">About</Link>
 
-                <Link to="/menu">Menu</Link>
-                <Link to="/products">Products</Link>
-                <Link to="/reviews">Reviews</Link>
-                <Link to="/contact">Contacts</Link>
-                <Link to="/blog">Blogs</Link>
+            {/* Logo */}
+            <Link to="/" className="logo">
+                <img src={logo} alt="logo" />
+            </Link>
+
+
+            {/* Navbar */}
+            
+            <nav className={`navbar ${menuActive ? 'active' : ''}`}>
+
+                <Link to="/" className="active">
+                    Home
+                </Link>
+
+                <Link to="/about">
+                    About
+                </Link>
+
+                <Link to="/menu">
+                    Menu
+                </Link>
+
+                <Link to="/products">
+                    Products
+                </Link>
+
+                <Link to="/reviews">
+                    Reviews
+                </Link>
+
+                <Link to="/contact">
+                    Contacts
+                </Link>
+
+                <Link to="/blog">
+                    Blogs
+                </Link>
+
             </nav>
+
+
+            {/* Buttons */}
             <div className="buttons">
-                <button id="search-btn" type="button">
+
+                {/* Search Button */}
+                <button
+                    id="search-btn"
+                    type="button"
+                    onClick={() => {
+                        setSearchActive(!searchActive);
+                        setCartActive(false);
+                    }}
+                >
                     <i className="fas fa-search"></i>
                 </button>
-                <button id="cart-btn" type="button">
+
+
+                {/* Cart Button */}
+                <button
+                    id="cart-btn"
+                    type="button"
+                    onClick={() => {
+                        setCartActive(!cartActive);
+                        setSearchActive(false);
+                    }}
+                >
                     <i className="fas fa-shopping-cart"></i>
                 </button>
-                <button id="menu-btn" type="button">
+
+
+                {/* Menu Button */}
+                <button
+                    id="menu-btn"
+                    type="button"
+                    onClick={() => setMenuActive(!menuActive)}
+                >
                     <i className="fas fa-bars"></i>
                 </button>
+
             </div>
-            <div className="search-form">
-                <input type="text" className="search-input" id="search-box" placeholder="Search" />
+
+
+            {/* Search Form */}
+            <div className={`search-form ${searchActive ? 'active' : ''}`}>
+
+                <input
+                    type="text"
+                    className="search-input"
+                    id="search-box"
+                    placeholder="Search"
+                />
+
                 <i className="fas fa-search"></i>
+
             </div>
-          {/*   <div className="cart-items-container">
+
+
+            {/* Cart Items */}
+            <div
+                className={`cart-items-container ${
+                    cartActive ? 'active' : ''
+                }`}
+            >
+
+                {/* Cart Item 01 */}
                 <div className="cart-item">
+
                     <i className="fas fa-times"></i>
-                    <img src={img1} alt="menu" />
+
                     <div className="content">
-                        <h3>cart item 01</h3>
-                        <div className="price">$15.99 </div>
+                        <h3>Cart Item 01</h3>
+                        <div className="price">
+                            $15.99
+                        </div>
                     </div>
+
                 </div>
+
+
+                {/* Cart Item 02 */}
                 <div className="cart-item">
+
                     <i className="fas fa-times"></i>
-                    <img src={img2} alt="menu" />
+
                     <div className="content">
-                        <h3>cart item 02</h3>
-                        <div className="price">$16.99 </div>
+                        <h3>Cart Item 02</h3>
+                        <div className="price">
+                            $16.99
+                        </div>
                     </div>
+
                 </div>
+
+
+                {/* Cart Item 03 */}
                 <div className="cart-item">
+
                     <i className="fas fa-times"></i>
-                    <img src={img3} alt="menu" />
+
                     <div className="content">
-                        <h3>cart item 03</h3>
-                        <div className="price">$13.99 </div>
+                        <h3>Cart Item 03</h3>
+                        <div className="price">
+                            $13.99
+                        </div>
                     </div>
+
                 </div>
+
+
+                {/* Cart Item 04 */}
                 <div className="cart-item">
+
                     <i className="fas fa-times"></i>
-                    <img src={img4} alt="menu" />
+
                     <div className="content">
-                        <h3>cart item 04</h3>
-                        <div className="price">$12.99 </div>
+                        <h3>Cart Item 04</h3>
+                        <div className="price">
+                            $12.99
+                        </div>
                     </div>
+
                 </div>
-                <a href="#" className="btn">check out </a>
-            </div>*/}
+
+
+                {/* Checkout Button */}
+                <Link to="/checkout" className="btn">
+                    Check Out
+                </Link>
+
+            </div>
+
         </header>
     );
 };
