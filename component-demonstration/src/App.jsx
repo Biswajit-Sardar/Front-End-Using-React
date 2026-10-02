@@ -14,6 +14,7 @@ import Menus from './components/Small-Components/Menus/Menus'
 import Products from './components/Small-Components/Products/Products'
 import Reviews from './components/Small-Components/Reviews/Reviews'
 import Contacts from './components/Small-Components/Contacts/Contacts'
+import Blogs from './components/Small-Components/Blogs/Blogs'
 
 import './App.css'
 
@@ -49,6 +50,7 @@ function App() {
          <Route path="/products" element={<Products />} />
          <Route path="/reviews" element={<Reviews />} />
          <Route path="/contact" element={<Contacts />} />
+         <Route path="/blog" element={<Blogs />} />
          
       </Routes>
       <Footer />
