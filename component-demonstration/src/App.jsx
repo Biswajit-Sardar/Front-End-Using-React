@@ -5,6 +5,7 @@ import Product from './components/Product/Product'
 import About from './components/About/About'
 import Review from './components/Review/Review'
 import Contact from './components/Contact/Contact'
+import Blog from './components/Blog/Blog'
 
 
 
@@ -23,6 +24,7 @@ function App() {
         <About />
         <Review />
         <Contact />
+        <Blog />
 
 
       </main>
