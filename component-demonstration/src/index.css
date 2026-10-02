@@ -230,3 +230,10 @@ a{
 ::-webkit-scrollbar-thumb:hover{
     background-color: rgb(211, 255, 144);
 }
+
+
+@media (max-width: 768px){
+    html{
+        font-size: 50%;
+    }
+}
