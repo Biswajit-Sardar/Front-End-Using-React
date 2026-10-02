@@ -1,3 +1,5 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 import Header from './components/Header/Header'
 import Home from './components/Home/Home'
 import Menu from './components/Menu/Menu'
@@ -7,32 +9,42 @@ import Review from './components/Review/Review'
 import Contact from './components/Contact/Contact'
 import Blog from './components/Blog/Blog'
 import Footer from './components/Footer/Footer'
-
-
-
-
+import Abouts from './components/Small-Components/Abouts/Abouts'
 
 import './App.css'
 
-function App() {
+function HomePage() {
   return (
-    <div className="app">
-      <main className="main-content">
-        <Header />
-        <Home />
-        <Menu />
-        <Product/>
-        <About />
-        <Review />
-        <Contact />
-        <Blog />
-        <Footer />
-
-
-      </main>
-      
-      
-    </div>
+    <>
+      <Home />
+      <Menu />
+      <Product />
+      <About />
+      <Review />
+      <Contact />
+      <Blog />
+      <Footer />
+    </>
   )
 }
+function App() {
+  return (
+    <BrowserRouter>
+
+      <Header />
+
+      <Routes>
+
+        {/* Main/Home Page */}
+        <Route path="/" element={<HomePage />} />
+
+        {/* Separate About Page */}
+        <Route path="/about" element={<Abouts />} />
+
+      </Routes>
+
+    </BrowserRouter>
+  )
+}
+
 export default App

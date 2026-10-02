@@ -1,6 +1,8 @@
 import './Header.css';
 // cspell:disable-next-line
 import logo from '../../assets/pngegg.png';
+import { Link } from 'react-router-dom';
+
 
 const Header = () => {
     return (
@@ -9,13 +11,14 @@ const Header = () => {
                 <img src={logo} alt="logo" />
             </a>
             <nav className="navbar">
-                <a href="./index.html" className="active">Home</a>
-                <a href="./about.html">About</a>
-                <a href="./menu.html">Menu</a>
-                <a href="./products.html">Products</a>
-                <a href="./review.html">Review</a>
-                <a href="./contact.html">Contact</a>
-                <a href="./blog.html">Blog</a>
+                <Link to="/" className="active">Home</Link>
+                <Link to="/about">About</Link>
+
+                <a href="#menu">Menu</a>
+                <a href="#products">Products</a>
+                <a href="#review">Review</a>
+                <a href="#contact">Contact</a>
+                <a href="#blog">Blog</a>
             </nav>
             <div className="buttons">
                 <button id="search-btn" type="button">
