@@ -5,7 +5,7 @@ import img1 from '../../assets/pngwing.com (1).png';
 import img2 from '../../assets/pngwing.com (2).png';
 import img3 from '../../assets/pngwing.com (3).png';
 import img4 from '../../assets/pngwing.com (4).png';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Header = () => {
 
@@ -22,42 +22,42 @@ const Header = () => {
         <header className="header">
 
             {/* Logo */}
-            <Link to="/" className="logo">
+            <NavLink to="/" className="logo">
                 <img src={logo} alt="logo" />
-            </Link>
+            </NavLink>
 
 
             {/* Navbar */}
             
             <nav className={`navbar ${menuActive ? 'active' : ''}`}>
 
-                <Link to="/" className="active">
+                <NavLink to="/home" >
                     Home
-                </Link>
+                </NavLink>
 
-                <Link to="/about">
+                <NavLink to="/about">
                     About
-                </Link>
+                </NavLink>
 
-                <Link to="/menu">
+                <NavLink to="/menu">
                     Menu
-                </Link>
+                </NavLink>
 
-                <Link to="/products">
+                <NavLink to="/products">
                     Products
-                </Link>
+                </NavLink>
 
-                <Link to="/reviews">
+                <NavLink to="/reviews">
                     Reviews
-                </Link>
+                </NavLink>
 
-                <Link to="/contact">
+                <NavLink to="/contact">
                     Contacts
-                </Link>
+                </NavLink>
 
-                <Link to="/blog">
+                <NavLink to="/blog">
                     Blogs
-                </Link>
+                </NavLink>
 
             </nav>
 
@@ -186,9 +186,9 @@ const Header = () => {
 
 
                 {/* Checkout Button */}
-                <Link to="/checkout" className="btn">
+                <NavLink to="/checkout" className="btn">
                     Check Out
-                </Link>
+                </NavLink>
 
             </div>
 

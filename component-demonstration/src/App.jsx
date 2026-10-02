@@ -41,7 +41,7 @@ function App() {
       <Routes>
 
         {/* Main/Home Page */}
-        <Route path="/" element={<HomePage />} />
+        <Route path="/home" element={<HomePage />} />
 
         {/* Separate About Page */}
         <Route path="/about" element={<Abouts />} />
