@@ -1,6 +1,10 @@
 import { useState } from 'react';
 import './Header.css';
 import logo from '../../assets/pngegg.png';
+import img1 from '../../assets/pngwing.com (1).png';
+import img2 from '../../assets/pngwing.com (2).png';
+import img3 from '../../assets/pngwing.com (3).png';
+import img4 from '../../assets/pngwing.com (4).png';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
@@ -125,7 +129,7 @@ const Header = () => {
                 <div className="cart-item">
 
                     <i className="fas fa-times"></i>
-
+                    <img src={img1} alt="menu"></img>
                     <div className="content">
                         <h3>Cart Item 01</h3>
                         <div className="price">
@@ -138,7 +142,7 @@ const Header = () => {
 
                 {/* Cart Item 02 */}
                 <div className="cart-item">
-
+                    <img src={img2} alt="menu"></img>
                     <i className="fas fa-times"></i>
 
                     <div className="content">
@@ -153,7 +157,7 @@ const Header = () => {
 
                 {/* Cart Item 03 */}
                 <div className="cart-item">
-
+                    <img src={img3} alt="menu"></img>
                     <i className="fas fa-times"></i>
 
                     <div className="content">
@@ -168,7 +172,7 @@ const Header = () => {
 
                 {/* Cart Item 04 */}
                 <div className="cart-item">
-
+                    <img src={img4} alt="menu"></img>
                     <i className="fas fa-times"></i>
 
                     <div className="content">
