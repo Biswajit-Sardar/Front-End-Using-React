@@ -10,6 +10,7 @@ import Contact from './components/Contact/Contact'
 import Blog from './components/Blog/Blog'
 import Footer from './components/Footer/Footer'
 import Abouts from './components/Small-Components/Abouts/Abouts'
+import Menus from './components/Small-Components/Menus/Menus'
 
 import './App.css'
 
@@ -40,8 +41,11 @@ function App() {
 
         {/* Separate About Page */}
         <Route path="/about" element={<Abouts />} />
+        
+         <Route path="/menu" element={<Menus />} />
 
       </Routes>
+      <Footer />
 
     </BrowserRouter>
   )

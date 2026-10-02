@@ -14,11 +14,11 @@ const Header = () => {
                 <Link to="/" className="active">Home</Link>
                 <Link to="/about">About</Link>
 
-                <a href="#menu">Menu</a>
-                <a href="#products">Products</a>
-                <a href="#review">Review</a>
-                <a href="#contact">Contact</a>
-                <a href="#blog">Blog</a>
+                <Link to="/menu">Menu</Link>
+                <Link to="/products">Products</Link>
+                <Link to="/review">Review</Link>
+                <Link to="/contact">Contact</Link>
+                <Link to="/blog">Blog</Link>
             </nav>
             <div className="buttons">
                 <button id="search-btn" type="button">
