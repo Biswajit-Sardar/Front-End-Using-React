@@ -16,9 +16,9 @@ const Header = () => {
 
                 <Link to="/menu">Menu</Link>
                 <Link to="/products">Products</Link>
-                <Link to="/review">Review</Link>
-                <Link to="/contact">Contact</Link>
-                <Link to="/blog">Blog</Link>
+                <Link to="/reviews">Reviews</Link>
+                <Link to="/contact">Contacts</Link>
+                <Link to="/blog">Blogs</Link>
             </nav>
             <div className="buttons">
                 <button id="search-btn" type="button">
@@ -38,7 +38,7 @@ const Header = () => {
           {/*   <div className="cart-items-container">
                 <div className="cart-item">
                     <i className="fas fa-times"></i>
-                    <img src="./image/pngwing.com (1).png" alt="menu" />
+                    <img src={img1} alt="menu" />
                     <div className="content">
                         <h3>cart item 01</h3>
                         <div className="price">$15.99 </div>
@@ -46,7 +46,7 @@ const Header = () => {
                 </div>
                 <div className="cart-item">
                     <i className="fas fa-times"></i>
-                    <img src="./image/pngwing.com (2).png" alt="menu" />
+                    <img src={img2} alt="menu" />
                     <div className="content">
                         <h3>cart item 02</h3>
                         <div className="price">$16.99 </div>
@@ -54,7 +54,7 @@ const Header = () => {
                 </div>
                 <div className="cart-item">
                     <i className="fas fa-times"></i>
-                    <img src="./image/pngwing.com (3).png" alt="menu" />
+                    <img src={img3} alt="menu" />
                     <div className="content">
                         <h3>cart item 03</h3>
                         <div className="price">$13.99 </div>
@@ -62,7 +62,7 @@ const Header = () => {
                 </div>
                 <div className="cart-item">
                     <i className="fas fa-times"></i>
-                    <img src="./image/pngwing.com (4).png" alt="menu" />
+                    <img src={img4} alt="menu" />
                     <div className="content">
                         <h3>cart item 04</h3>
                         <div className="price">$12.99 </div>
