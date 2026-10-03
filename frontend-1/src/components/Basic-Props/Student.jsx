@@ -1,6 +1,6 @@
 import './Student.css';
 
-const Student = ({name,age,grade }) => {
+const Student = ({name,age,grade = "N/A" }) => {
     return (
     <div className="student-card">
       <h3>{name}</h3>

@@ -9,8 +9,8 @@ function App() {
   <div className="app">
     <h2>Student List</h2>
     <Student name="Alice" age={20} grade="A" />
-    <Student name="Bob" age={22} grade="B+" />
-    <Student name="Charlie" age={21} grade="A-" />
+    <Student name="Bob" age={22}  />
+    <Student name="Charlie" age={21} />
     </div>
   )
 }
