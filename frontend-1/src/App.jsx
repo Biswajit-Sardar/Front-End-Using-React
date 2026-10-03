@@ -1,25 +1,16 @@
-import Greeting from './components/single-components/Greeting'
-import Header from  './components/multiple-components/Header/Header'
-import Footer from './components/multiple-components/Footer/Footer'
-import JSXExample from './components/Jsx-Examples/JSXExample.jsx'
-import ConditionalRendering from './components/Conditional-Rendering/ConditionalRendering.jsx'
-import InlineStyleExample from './components/inline-Style/InlineStyleExample.jsx'
+
+import  Student from './components/Basic-Props/Student.jsx'
 import './App.css'
 
 function App() {
   return (
-    <div className="app">
-      <Header />
-      <h1>React Fundamentals</h1>
-      <p>Welcome to Module 13</p>
-      <main className="main-content">
-        <Greeting />
-        <JSXExample />
-        <ConditionalRendering />
-        <InlineStyleExample />
-      </main>
-      
-      <Footer />
+
+
+  <div className="app">
+    <h2>Student List</h2>
+    <Student name="Alice" age={20} grade="A" />
+    <Student name="Bob" age={22} grade="B+" />
+    <Student name="Charlie" age={21} grade="A-" />
     </div>
   )
 }
